@@ -1,0 +1,303 @@
+.tui-pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tui-page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 18px;
+  color: inherit;
+}
+
+.dark .tui-page-btn {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .tui-page-btn {
+    height: 44px;
+    width: 44px;
+  }
+}
+
+.tui-page-btn.tui-first,
+.tui-page-btn.tui-prev {
+  color: var(--primary-back-color);
+  cursor: pointer;
+  background: var(--text-color);
+  border-color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .tui-page-btn.tui-first,
+  .tui-page-btn.tui-prev {
+    height: 44px;
+    width: 44px;
+  }
+}
+
+.tui-page-btn.tui-first,
+.tui-page-btn.tui-prev {
+  color: var(--primary-back-color);
+  cursor: pointer;
+  background: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.tui-page-btn.tui-prev {
+  margin-right: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .tui-page-btn.tui-prev {
+    margin-right: 16px;
+  }
+}
+
+.tui-page-btn.tui-first:hover,
+.tui-page-btn.tui-prev:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tui-page-btn.tui-first:active,
+.tui-page-btn.tui-prev:active {
+  color: var(--dec-color);
+}
+
+.tui-page-btn.tui-next,
+.tui-page-btn.tui-last {
+  color: var(--text-color);
+  cursor: pointer;
+  background: var(--dec-color);
+  border-color: var(--text-color);
+}
+
+.tui-page-btn.tui-next {
+  margin-left: 6px;
+}
+@media screen and (min-width: 768px) {
+  .tui-page-btn.tui-next {
+    margin-left: 16px;
+  }
+}
+
+.tui-page-btn.tui-next:hover,
+.tui-page-btn.tui-last:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tui-page-btn.tui-next:active,
+.tui-page-btn.tui-last:active {
+  color: var(--primary-back-color);
+}
+
+.tui-page-btn.tui-is-disabled.tui-first,
+.tui-page-btn.tui-is-disabled.tui-prev {
+  color: var(--sec-text-color);
+  cursor: pointer;
+  background: var(--text-color);
+  border-color: var(--text-color);
+  filter: none;
+}
+
+.tui-page-btn.tui-is-disabled.tui-next,
+.tui-page-btn.tui-is-disabled.tui-last {
+  color: var(--sec-text-color);
+  cursor: pointer;
+  background: var(--dec-color);
+  border-color: var(--text-color);
+  filter: none;
+}
+
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  color: var(--primary-back-color);
+  cursor: pointer;
+  background: var(--text-color);
+  border-color: var(--text-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.dark .tui-pagination .tui-is-selected,
+.dark .tui-pagination strong {
+  color: var(--text-color);
+  cursor: pointer;
+  background: var(--primary-back-color);
+  border-color: var(--primary-back-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tui-pagination .tui-ico-first,
+.tui-pagination .tui-ico-prev,
+.tui-pagination .tui-ico-next,
+.tui-pagination .tui-ico-last {
+  font-size: 0;
+}
+
+.tui-ico-prev::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  border: 2px solid;
+  border-left: none;
+  border-top: none;
+  border-radius: 2px;
+  transform: rotate(0.37turn);
+}
+@media screen and (min-width: 768px) {
+  .tui-ico-prev::before {
+    height: 14px;
+    width: 14px;
+    border: 3px solid;
+    border-left: none;
+    border-top: none;
+    border-radius: 3px;
+  }
+}
+
+.tui-ico-first::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 2px solid;
+  border-left: none;
+  border-top: none;
+  border-radius: 2px;
+  transform: rotate(0.37turn);
+}
+@media screen and (min-width: 768px) {
+  .tui-ico-first::after {
+    height: 14px;
+    width: 14px;
+    border: 3px solid;
+    border-left: none;
+    border-top: none;
+    border-radius: 3px;
+  }
+}
+
+.tui-ico-first::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid;
+  border-left: none;
+  border-top: none;
+  border-radius: 2px;
+  transform: translateX(10px) rotate(0.37turn);
+}
+@media screen and (min-width: 768px) {
+  .tui-ico-first::before {
+    height: 14px;
+    width: 14px;
+    border: 3px solid;
+    border-left: none;
+    border-top: none;
+    border-radius: 3px;
+  }
+}
+
+.tui-ico-next::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border: 2px solid;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 2px;
+  transform: rotate(0.37turn);
+}
+@media screen and (min-width: 768px) {
+  .tui-ico-next::before {
+    height: 14px;
+    width: 14px;
+    border: 3px solid;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 3px;
+  }
+}
+
+.tui-ico-last::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 2px solid;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 2px;
+  transform: rotate(0.37turn);
+}
+@media screen and (min-width: 768px) {
+  .tui-ico-last::before {
+    height: 14px;
+    width: 14px;
+    border: 3px solid;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 3px;
+  }
+}
+
+.tui-ico-last::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 2px;
+  transform: translateX(-10px) rotate(0.37turn);
+}
+@media screen and (min-width: 768px) {
+  .tui-ico-last::after {
+    height: 14px;
+    width: 14px;
+    border: 3px solid;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 3px;
+  }
+}
+
+.tui-page-btn.tui-prev-is-ellip.tui-first-child {
+  display: none;
+}
+
+.tui-page-btn.tui-next-is-ellip.tui-last-child:hover,
+.tui-page-btn.tui-prev-is-ellip.tui-first-child:hover {
+  background-color: var(--primary-back-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tui-page-btn.tui-next-is-ellip.tui-last-child:active {
+  background-color: var(--dec-color);
+  color: var(--primary-back-color);
+}
+
+.tui-page-btn.tui-prev-is-ellip.tui-first-child:active {
+  background-color: var(--text-color);
+  color: var(--primary-back-color);
+}
